@@ -22,6 +22,7 @@ class plgAPIBiodiv extends ApiPlugin
 		// Set the user resources to be public - we will handle the OAuth2 client credentials flow rather than using com_api and Joomla access
 		$this->setResourceAccess('user', 'public', 'get');
 		$this->setResourceAccess('user', 'public', 'post');
+		$this->setResourceAccess('classify', 'public', 'post');
 	}
 }
 

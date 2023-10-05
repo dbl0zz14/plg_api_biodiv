@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
 // Include Auth and biodiv files
 $component_path = JPATH_SITE . '/components/com_biodiv';
 
-error_log("Component path = " . $component_path );
+//error_log("Component path = " . $component_path );
 
 require_once($component_path.'/BiodivAuth.php');
 require_once($component_path.'/BiodivHelper.php');
@@ -22,7 +22,7 @@ class BiodivApiResourceUser extends ApiResource
 		$helper = new BiodivHelper();
 		$scopestem = $helper->getScopeStem();
 		
-		error_log ("Method = GET" );
+		//error_log ("Method = GET" );
 	
 		$isok = false;
 		
@@ -31,6 +31,7 @@ class BiodivApiResourceUser extends ApiResource
 		}
 		catch (Exception $e ) {
 			error_log("Exception caught out of BiodivAuth");
+			error_log("Exception message: " . $e->getMessage() );
 			
 			header('HTTP/1.1 403 Forbidden', true, 403);
 			ApiError::raiseError(11001, "Not authorised", 'APIUnauthorisedException');
