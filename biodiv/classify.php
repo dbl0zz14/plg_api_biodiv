@@ -101,13 +101,13 @@ class BiodivApiResourceClassify extends ApiResource
 				if ( !$imageId  ) {
 					
 					$isValid = false;
-					$err_msg = "Cannot find image for sensor id and filename in database";
+					$err_msg = "Cannot find image for sensor id (" . $siteId . ") and filename (" . $filename . ") in database";
 					$err_code = 100014;
 				}
 				else if ( !$sequenceId  ) {
 					
 					$isValid = false;
-					$err_msg = "Cannot find sequence for sensor id and filename in database";
+					$err_msg = "Cannot find sequence for sensor id (" . $siteId . ") and filename (" . $filename . ") in database";
 					$err_code = 100014;
 				}
 				else {
@@ -116,7 +116,7 @@ class BiodivApiResourceClassify extends ApiResource
 					if ( !$speciesId ) {
 						
 						$isValid = false;
-						$err_msg = "Species invalid";
+						$err_msg = "Species invalid, type = " . $speciesType . ", species = " . $species;
 						$err_code = 100015;
 						
 					}

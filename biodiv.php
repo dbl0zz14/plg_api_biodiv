@@ -23,6 +23,7 @@ class plgAPIBiodiv extends ApiPlugin
 		$this->setResourceAccess('user', 'public', 'get');
 		$this->setResourceAccess('user', 'public', 'post');
 		$this->setResourceAccess('classify', 'public', 'post');
+		$this->setResourceAccess('analysis', 'public', 'post');
 	}
 }
 

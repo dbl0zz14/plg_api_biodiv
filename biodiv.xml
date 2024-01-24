@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="1.0.0" type="plugin" group="api" method="upgrade">
     <name>BiodivAPI</name>
-    <version>2.0</version>
+    <version>2.1</version>
     <creationDate>19/05/2020</creationDate>
-    <author></author> 
+    <author>Helen Chappell</author> 
     <description></description>
     <files>
         <filename plugin="biodiv">biodiv.php</filename>
